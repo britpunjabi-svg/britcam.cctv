@@ -8,6 +8,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
+  faqs?: { q: string; a: string }[];
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -16,48 +17,66 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = "CCTV Chandigarh, Solar Panels Punjab, Biometric Attendance Mohali, Home Automation Panchkula, Security Systems Chandigarh, Solar Installation Punjab, Britcam, 4K Surveillance, Smart Home, Solar Energy",
   image = "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
   url = "https://britcam.in",
-  type = "website"
+  type = "website",
+  faqs = []
 }) => {
   const siteTitle = title.includes("Britcam") ? title : `${title} | Britcam Security & Solar`;
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Britcam Security & Solar Solutions",
-    "image": image,
-    "@id": "https://britcam.in",
-    "url": "https://britcam.in",
-    "telephone": "+919876905782",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "OFFICE NO 12, ANGREJ SINGH COMPLEX, BADHERI MAIN MARKET, SECTOR 41 D",
-      "addressLocality": "Chandigarh",
-      "postalCode": "160036",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 30.7284,
-      "longitude": 76.7384
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "19:00"
-    },
-    "sameAs": [
-      "https://www.facebook.com/britcam.in/",
-      "https://www.instagram.com/britcam.in/"
-    ]
-  };
+  const structuredData: any = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Britcam Security & Solar Solutions",
+      "image": image,
+      "@id": "https://britcam.in",
+      "url": "https://britcam.in",
+      "telephone": "+917888380934",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "OFFICE NO 12, ANGREJ SINGH COMPLEX, BADHERI MAIN MARKET, SECTOR 41 D",
+        "addressLocality": "Chandigarh",
+        "postalCode": "160036",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.7284,
+        "longitude": 76.7384
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/britcam.in/",
+        "https://www.instagram.com/britcam.in/"
+      ]
+    }
+  ];
+
+  if (faqs.length > 0) {
+    structuredData.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    });
+  }
 
   return (
     <Helmet>

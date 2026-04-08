@@ -23,7 +23,7 @@ Your primary objective is to collect the visitor's:
 Be professional, helpful, and concise. If they provide their details, thank them and let them know a specialist will contact them soon.
 
 Address: Office No 12, Angrej Singh Complex, Badheri Main Market, Sector 41 D, Chandigarh 160036.
-Phones: 98769 05782, 78883 80934.
+Phones: 78883 80934, 98769 05782.
 
 When you have collected the Name, Phone, and Service Interest, confirm it back to them.`;
 
@@ -35,12 +35,6 @@ export const AIChatBot = () => {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  const getAI = () => {
-    const key = process.env.GEMINI_API_KEY;
-    if (!key) return null;
-    return new GoogleGenAI({ apiKey: key });
-  };
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -57,19 +51,16 @@ export const AIChatBot = () => {
     setLoading(true);
 
     try {
-      const ai = getAI();
-      if (!ai) {
-        throw new Error("API Key missing");
-      }
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
       const chatHistory = messages.map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.text}`).join('\n');
       const prompt = `${SYSTEM_PROMPT}\n\nChat History:\n${chatHistory}\nUser: ${userMsg}\nAssistant:`;
 
       const response = await ai.models.generateContent({
-        model: "gemini-1.5-flash",
+        model: "gemini-3-flash-preview",
         contents: prompt,
       });
 
-      const botMsg = response.text || "I'm sorry, I'm having trouble responding right now. Please call us at 98769 05782.";
+      const botMsg = response.text || "I'm sorry, I'm having trouble responding right now. Please call us at 78883 80934.";
       setMessages(prev => [...prev, { role: 'bot', text: botMsg }]);
 
       // Simple heuristic to check if lead info is collected and save to Firestore
@@ -80,7 +71,7 @@ export const AIChatBot = () => {
 
     } catch (error) {
       console.error("Chat error:", error);
-      setMessages(prev => [...prev, { role: 'bot', text: "Something went wrong. Please try again or call us directly." }]);
+      setMessages(prev => [...prev, { role: 'bot', text: "Something went wrong. Please try again or call us directly at 78883 80934." }]);
     } finally {
       setLoading(false);
     }

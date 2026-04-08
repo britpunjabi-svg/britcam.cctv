@@ -14,7 +14,8 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
-    { name: 'Gallery', path: '/gallery' },
+    { name: 'Products', path: '/products/ip-camera' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Solar', path: '/solar' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -56,9 +57,9 @@ export const Navbar = () => {
                 </a>
               </div>
 
-              <a href="tel:+919876905782" className="flex items-center gap-2 text-brand-gold font-bold">
+              <a href="tel:+917888380934" className="flex items-center gap-2 text-brand-gold font-bold">
                 <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">98769 05782</span>
+                <span className="hidden xl:inline">78883 80934</span>
               </a>
               
               {user ? (

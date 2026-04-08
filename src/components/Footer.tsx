@@ -26,7 +26,7 @@ export const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-white/70">
                 <Phone className="w-5 h-5 text-brand-gold" />
-                <span>+91 98769 05782, 78883 80934</span>
+                <span>+91 78883 80934, 98769 05782</span>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <MapPin className="w-5 h-5 text-brand-gold" />
@@ -40,18 +40,20 @@ export const Footer = () => {
             <ul className="space-y-4 text-white/50">
               <li><Link to="/solar" className="hover:text-brand-gold transition-colors">Solar Installation</Link></li>
               <li><Link to="/services/cctv" className="hover:text-brand-gold transition-colors">CCTV Surveillance</Link></li>
-              <li><Link to="/services/biometrics" className="hover:text-brand-gold transition-colors">Biometric Systems</Link></li>
-              <li><Link to="/services/automation" className="hover:text-brand-gold transition-colors">Home Automation</Link></li>
+              <li><Link to="/products/ip-camera" className="hover:text-brand-gold transition-colors">IP Camera Systems</Link></li>
+              <li><Link to="/products/wifi-camera" className="hover:text-brand-gold transition-colors">WiFi Home Cameras</Link></li>
+              <li><Link to="/blog" className="hover:text-brand-gold transition-colors">Security Blog</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-6">Service Areas</h4>
             <ul className="space-y-4 text-white/50">
-              <li><Link to="/gallery" className="hover:text-brand-gold transition-colors">Project Gallery</Link></li>
-              <li><Link to="/contact" className="hover:text-brand-gold transition-colors">Get a Quote</Link></li>
-              <li><Link to="/services" className="hover:text-brand-gold transition-colors">All Services</Link></li>
-              <li><Link to="/" className="hover:text-brand-gold transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/cctv-installation-chandigarh" className="hover:text-brand-gold transition-colors">Chandigarh</Link></li>
+              <li><Link to="/cctv-installation-mohali" className="hover:text-brand-gold transition-colors">Mohali</Link></li>
+              <li><Link to="/cctv-installation-panchkula" className="hover:text-brand-gold transition-colors">Panchkula</Link></li>
+              <li><Link to="/cctv-installation-zirakpur" className="hover:text-brand-gold transition-colors">Zirakpur</Link></li>
+              <li><Link to="/cctv-installation-kharar" className="hover:text-brand-gold transition-colors">Kharar</Link></li>
             </ul>
           </div>
         </div>

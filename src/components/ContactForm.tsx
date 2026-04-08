@@ -16,25 +16,37 @@ export const ContactForm = () => {
     setError(null);
     
     const formData = new FormData(e.currentTarget);
-    const data = {
-      userId: user?.uid || null,
+    const data: any = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
       serviceType: formData.get('serviceType') as string,
-      location: 'Tricity', // Default or from input
+      location: 'Tricity',
       message: formData.get('message') as string,
       status: 'pending',
       createdAt: new Date().toISOString(),
     };
 
+    if (user?.uid) {
+      data.userId = user.uid;
+    }
+
     try {
+      // 1. Save to Firestore
       await addDoc(collection(db, 'serviceRequests'), data);
+      
+      // 2. Log to server (could trigger email in future)
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
     } catch (err: any) {
       console.error('Firestore Error:', err);
-      setError('Failed to send inquiry. Please try again.');
+      setError('Failed to send inquiry. Please try again or email us directly at britcam.in@gmail.com');
     } finally {
       setLoading(false);
     }
@@ -42,11 +54,22 @@ export const ContactForm = () => {
 
   if (success) {
     return (
-      <div className="glass-card p-10 text-center space-y-4">
+      <div className="glass-card p-10 text-center space-y-6">
         <CheckCircle2 className="w-16 h-16 text-brand-gold mx-auto" />
-        <h3 className="text-2xl font-display font-bold">Inquiry Sent!</h3>
-        <p className="text-white/60">Our security experts will contact you within 24 hours.</p>
-        <button onClick={() => setSuccess(false)} className="text-brand-gold font-bold hover:underline">Send another inquiry</button>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-display font-bold">Inquiry Sent!</h3>
+          <p className="text-white/60">Our security experts will contact you within 24 hours.</p>
+        </div>
+        <div className="pt-4 border-t border-white/10">
+          <p className="text-sm text-white/40 mb-4">Want immediate attention?</p>
+          <a 
+            href="mailto:britcam.in@gmail.com?subject=New Service Inquiry&body=Hello Britcam, I just submitted an inquiry on your website."
+            className="inline-block px-6 py-3 bg-white/5 border border-brand-gold text-brand-gold font-bold rounded-xl hover:bg-brand-gold hover:text-brand-dark transition-all"
+          >
+            Email Directly
+          </a>
+        </div>
+        <button onClick={() => setSuccess(false)} className="block w-full text-white/30 text-xs uppercase tracking-widest hover:text-brand-gold transition-colors">Send another inquiry</button>
       </div>
     );
   }

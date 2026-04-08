@@ -4,21 +4,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=2000",
-    title: "SOLAR ENERGY SOLUTIONS",
-    subtitle: "Empowering Punjab with 1KV to 10KV Solar Panel Installations",
-    cta: "Go Solar Today"
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=2000",
+    title: "CCTV INSTALLATION CHANDIGARH",
+    subtitle: "Best CCTV Camera Shop in Chandigarh & Mohali with Free Site Visit",
+    cta: "Get Best Price"
   },
   {
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=2000",
-    title: "ADVANCED SURVEILLANCE",
-    subtitle: "4K AI-Powered CCTV Systems for Elite Security",
-    cta: "Secure Your Property"
+    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=2000",
+    title: "SOLAR ENERGY PUNJAB",
+    subtitle: "Affordable 1KV to 10KV Solar Panel Installation in Chandigarh & Zirakpur",
+    cta: "Go Solar Today"
   },
   {
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=2000",
     title: "SMART HOME AUTOMATION",
-    subtitle: "Control Your World with Precision and Ease",
+    subtitle: "Premium IP Camera Installation & Smart Locks in Panchkula & Kharar",
     cta: "Experience Smart Living"
   }
 ];
