@@ -1,10 +1,10 @@
 {
-  "projectId": "princestudio-1490337208108",
-  "appId": "1:585207634553:web:88c4d919e7b7ee1b2852a8",
-  "apiKey": "AIzaSyCHuvkne4dwD4Cpv1M7u2EL6xoZ9PefcwI",
-  "authDomain": "princestudio-1490337208108.firebaseapp.com",
+  "projectId": "britcam-128b7",
+  "appId": "1:566413196208:web:651dd8a1eceb75dc393475",
+  "apiKey": "AIzaSyAvr-5jtO9-vCzW4rrvE8R18nqfYN8yI4c",
+  "authDomain": "britcam-128b7.firebaseapp.com",
   "firestoreDatabaseId": "ai-studio-052e91db-744e-435c-ae9d-a5a9e2fd0418",
-  "storageBucket": "princestudio-1490337208108.firebasestorage.app",
-  "messagingSenderId": "585207634553",
+  "storageBucket": "britcam-128b7.firebasestorage.app",
+  "messagingSenderId": "566413196208",
   "measurementId": ""
 }
