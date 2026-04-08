@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { 
   Camera, Fingerprint, Lock, Smartphone, Shield, 
   Construction, Car, DoorOpen, Zap, Users, 
@@ -97,6 +98,10 @@ const servicesList = [
 export const ServicesPage = () => {
   return (
     <div className="pt-20">
+      <SEO 
+        title="Security & Automation Services"
+        description="Explore our range of 4K CCTV, Biometrics, Home Automation, and Gate Automation services in Chandigarh and Punjab."
+      />
       <section className="py-32 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">

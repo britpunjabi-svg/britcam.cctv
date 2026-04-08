@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -37,20 +38,20 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-4 text-white/50">
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Solar Installation</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">CCTV Surveillance</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Biometric Systems</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Home Automation</a></li>
+              <li><Link to="/solar" className="hover:text-brand-gold transition-colors">Solar Installation</Link></li>
+              <li><Link to="/services/cctv" className="hover:text-brand-gold transition-colors">CCTV Surveillance</Link></li>
+              <li><Link to="/services/biometrics" className="hover:text-brand-gold transition-colors">Biometric Systems</Link></li>
+              <li><Link to="/services/automation" className="hover:text-brand-gold transition-colors">Home Automation</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-white/50">
-              <li><a href="#gallery" className="hover:text-brand-gold transition-colors">Project Gallery</a></li>
-              <li><a href="#contact" className="hover:text-brand-gold transition-colors">Get a Quote</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Privacy Policy</a></li>
+              <li><Link to="/gallery" className="hover:text-brand-gold transition-colors">Project Gallery</Link></li>
+              <li><Link to="/contact" className="hover:text-brand-gold transition-colors">Get a Quote</Link></li>
+              <li><Link to="/services" className="hover:text-brand-gold transition-colors">All Services</Link></li>
+              <li><Link to="/" className="hover:text-brand-gold transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

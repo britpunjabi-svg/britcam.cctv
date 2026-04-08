@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { HelmetProvider } from 'react-helmet-async';
+import { SEO } from './components/SEO';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HeroCarousel } from './components/HeroCarousel';
@@ -18,6 +20,10 @@ import { motion } from 'motion/react';
 
 const HomePage = () => (
   <>
+    <SEO 
+      title="Elite Security & Solar Solutions Chandigarh"
+      description="Premium CCTV installation, Solar Panels, and Home Automation in Chandigarh, Punjab, and Haryana. Serving 100km radius of Tricity with 4K surveillance."
+    />
     <HeroCarousel />
     
     <section id="services" className="py-32 bg-brand-dark relative">
@@ -112,25 +118,27 @@ const ServiceCard = ({ icon: Icon, title, description, delay, id }: any) => (
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="min-h-screen">
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
-              <Route path="/solar" element={<SolarPage />} />
-              <Route path="/gallery" element={<div className="pt-20"><Gallery /></div>} />
-              <Route path="/contact" element={<div className="pt-20"><section className="py-32 bg-brand-dark"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><ContactForm /></div></section></div>} />
-            </Routes>
-          </main>
-          <Footer />
-          <WhatsAppButton />
-          <AIChatBot />
-          <PWAInstallPrompt />
-        </div>
-      </Router>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen">
+            <Navbar />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+                <Route path="/solar" element={<SolarPage />} />
+                <Route path="/gallery" element={<div className="pt-20"><Gallery /></div>} />
+                <Route path="/contact" element={<div className="pt-20"><section className="py-32 bg-brand-dark"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><ContactForm /></div></section></div>} />
+              </Routes>
+            </main>
+            <Footer />
+            <WhatsAppButton />
+            <AIChatBot />
+            <PWAInstallPrompt />
+          </div>
+        </Router>
+      </HelmetProvider>
     </AuthProvider>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { 
   Camera, Shield, Lock, Smartphone, Fingerprint, 
   Zap, Car, DoorOpen, PhoneCall, Bell, 
@@ -82,6 +83,11 @@ export const ServiceDetailPage = () => {
 
   return (
     <div className="pt-20 min-h-screen bg-brand-dark">
+      <SEO 
+        title={service.title}
+        description={service.description}
+        image={service.images[0]}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link to="/services" className="inline-flex items-center gap-2 text-brand-gold hover:text-white mb-12 transition-colors">
           <ArrowLeft className="w-5 h-5" />

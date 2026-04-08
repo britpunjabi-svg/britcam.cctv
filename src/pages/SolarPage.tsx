@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Sun, Zap, Battery, ShieldCheck, MapPin, Phone } from 'lucide-react';
 import { ContactForm } from '../components/ContactForm';
+import { SEO } from '../components/SEO';
 
 const solarPlans = [
   { capacity: "1 KV", ideal: "Small Homes / Shops", features: ["2-3 Fans", "4-5 Lights", "TV / Laptop"], price: "Starting ₹55,000" },
@@ -13,6 +14,11 @@ const solarPlans = [
 export const SolarPage = () => {
   return (
     <div className="pt-20">
+      <SEO 
+        title="Solar Panel Installation Chandigarh & Punjab"
+        description="Switch to clean energy with Britcam Solar. 1KV to 10KV solar panel installations in Chandigarh, Mohali, and Punjab. Reduce your electricity bills today."
+        keywords="Solar Panels Chandigarh, Solar Installation Punjab, 5KV Solar System, Solar Energy Mohali, Britcam Solar"
+      />
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
