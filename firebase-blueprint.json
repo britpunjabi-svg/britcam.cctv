@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "serviceRequests": {
+      "title": "Service Request",
+      "description": "A request for security services or consultation",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "UID of the user who made the request" },
+        "name": { "type": "string", "description": "Customer name" },
+        "email": { "type": "string", "format": "email", "description": "Customer email" },
+        "phone": { "type": "string", "description": "Customer phone number" },
+        "serviceType": { "type": "string", "enum": ["CCTV", "Biometric", "Automation", "Theft Control", "Epabx"], "description": "Type of service requested" },
+        "location": { "type": "string", "description": "Service location (Tricity, Punjab, etc.)" },
+        "message": { "type": "string", "description": "Additional details" },
+        "status": { "type": "string", "enum": ["pending", "contacted", "completed"], "description": "Request status" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Timestamp of request" }
+      },
+      "required": ["name", "email", "phone", "serviceType", "location", "status", "createdAt"]
+    },
+    "users": {
+      "title": "User Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "customer"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/serviceRequests/{requestId}": {
+      "schema": "serviceRequests",
+      "description": "Collection of service requests"
+    },
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profile documents"
+    }
+  }
+}
