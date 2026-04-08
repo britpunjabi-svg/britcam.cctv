@@ -65,7 +65,7 @@ export const HeroCarousel = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="max-w-3xl"
         >
-          <h1 className="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8">
             {slides[current].title.split(' ').map((word, i) => (
               <span key={i} className={i === 1 ? "text-gold" : ""}>{word} </span>
             ))}

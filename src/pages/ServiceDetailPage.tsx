@@ -25,8 +25,8 @@ const serviceDetails: Record<string, any> = {
     description: 'Advanced biometric solutions including Aadhaar-enabled machines for government and private sectors.',
     features: ['Aadhaar Enabled Biometric System (AEBAS)', 'Face Recognition Technology', 'Fingerprint & Palm Print', 'Cloud-based Attendance Management', 'Integration with Payroll'],
     images: [
-      'https://images.unsplash.com/photo-1551817958-c1993e11f8c9?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.pexels.com/photos/17155842/pexels-photo-17155842.jpeg',
+      'https://images.pexels.com/photos/13657444/pexels-photo-13657444.jpeg',
       'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800'
     ]
   },
@@ -49,7 +49,7 @@ const serviceDetails: Record<string, any> = {
     images: [
       'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1521225091412-4030c67486a5?auto=format&fit=crop&q=80&w=800'
+      'https://images.pexels.com/photos/7522609/pexels-photo-7522609.jpeg'
     ]
   },
   'boom-barriers': {
@@ -58,8 +58,19 @@ const serviceDetails: Record<string, any> = {
     description: 'Automatic vehicle access control systems for residential and commercial complexes.',
     features: ['High-Speed Operation', 'Remote & RFID Access', 'Loop Detector Integration', 'Weatherproof Design', 'Manual Override Support'],
     images: [
-      'https://images.unsplash.com/photo-1506318137071-a8e063b4bcc0?auto=format&fit=crop&q=80&w=800',
+      'https://images.pexels.com/photos/8696219/pexels-photo-8696219.jpeg',
       'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800'
+    ]
+  },
+  'car-dash-cams': {
+    title: 'Car Dash Cams',
+    icon: Car,
+    description: 'Premium dual-channel dash cams with 4K recording, GPS tracking, and parking mode.',
+    features: ['4K Ultra HD Front Recording', '1080p Rear Camera', 'GPS & Speed Tracking', 'G-Sensor Event Recording', 'Mobile App Integration'],
+    images: [
+      'https://images.pexels.com/photos/23319107/pexels-photo-23319107.jpeg',
+      'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800'
     ]
   }
@@ -85,7 +96,7 @@ export const ServiceDetailPage = () => {
             <div className="w-20 h-20 rounded-2xl bg-brand-gold/10 flex items-center justify-center mb-8 text-brand-gold">
               <service.icon className="w-10 h-10" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-8 uppercase tracking-tighter">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold mb-8 uppercase tracking-tighter">
               {service.title.split(' ')[0]} <span className="text-gold">{service.title.split(' ').slice(1).join(' ')}</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed mb-10">

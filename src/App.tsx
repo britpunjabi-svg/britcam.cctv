@@ -23,7 +23,7 @@ const HomePage = () => (
     <section id="services" className="py-32 bg-brand-dark relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">ELITE <span className="text-gold">SOLUTIONS</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-6">ELITE <span className="text-gold">SOLUTIONS</span></h2>
           <p className="text-white/50 max-w-2xl mx-auto text-lg">Serving Chandigarh and 100km radius with premium security and solar technology.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -43,7 +43,7 @@ const HomePage = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-5xl font-display font-bold mb-8">VISIT OUR <span className="text-gold">OFFICE</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-8">VISIT OUR <span className="text-gold">OFFICE</span></h2>
             <p className="text-white/60 text-lg mb-12">Expert consultation for your security and energy needs. Serving Punjab, Haryana, and HP.</p>
             
             <div className="space-y-8">
@@ -53,7 +53,7 @@ const HomePage = () => (
                 </div>
                 <div>
                   <p className="text-sm text-white/40 uppercase tracking-widest font-bold">Address</p>
-                  <p className="text-xl font-bold">OFFICE NO 12, ANGREJ SINGH COMPLEX, BADHERI MAIN MARKET, SECTOR 41 D, CHANDIGARH 160036</p>
+                  <p className="text-lg sm:text-xl font-bold">OFFICE NO 12, ANGREJ SINGH COMPLEX, BADHERI MAIN MARKET, SECTOR 41 D, CHANDIGARH 160036</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ const HomePage = () => (
                 </div>
                 <div>
                   <p className="text-sm text-white/40 uppercase tracking-widest font-bold">Direct Contacts</p>
-                  <p className="text-xl font-bold">98769 05782, 78883 80934</p>
+                  <p className="text-lg sm:text-xl font-bold">98769 05782, 78883 80934</p>
                 </div>
               </div>
             </div>

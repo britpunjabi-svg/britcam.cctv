@@ -20,14 +20,14 @@ const servicesList = [
     title: "Biometric Machines", 
     desc: "Advanced fingerprint & facial recognition.", 
     category: "Access",
-    image: "https://images.unsplash.com/photo-1551817958-c1993e11f8c9?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.pexels.com/photos/17155842/pexels-photo-17155842.jpeg"
   },
   { 
     icon: Users, 
     title: "Attendance Machines", 
     desc: "Cloud-based employee tracking solutions.", 
     category: "Business",
-    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.pexels.com/photos/13657444/pexels-photo-13657444.jpeg"
   },
   { 
     icon: Lock, 
@@ -62,21 +62,21 @@ const servicesList = [
     title: "Biometric Door Locks", 
     desc: "Keyless entry with fingerprint & PIN.", 
     category: "Security",
-    image: "https://images.unsplash.com/photo-1521225091412-4030c67486a5?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.pexels.com/photos/7522609/pexels-photo-7522609.jpeg"
   },
   { 
     icon: Car, 
     title: "Car Dash Cams", 
     desc: "Dual-channel 4K recording for vehicles.", 
     category: "Automotive",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.pexels.com/photos/23319107/pexels-photo-23319107.jpeg"
   },
   { 
     icon: Bell, 
     title: "Boom Barriers", 
     desc: "Automatic vehicle access control systems.", 
     category: "Access",
-    image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bcc0?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.pexels.com/photos/8696219/pexels-photo-8696219.jpeg"
   },
   { 
     icon: Video, 
@@ -100,8 +100,8 @@ export const ServicesPage = () => {
       <section className="py-32 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h1 className="text-6xl font-display font-bold mb-6 uppercase tracking-tighter">OUR <span className="text-gold">SERVICES</span></h1>
-            <p className="text-xl text-white/50 max-w-2xl mx-auto">Comprehensive security and automation solutions tailored for the modern world.</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6 uppercase tracking-tighter">OUR <span className="text-gold">SERVICES</span></h1>
+            <p className="text-lg sm:text-xl text-white/50 max-w-2xl mx-auto">Comprehensive security and automation solutions tailored for the modern world.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

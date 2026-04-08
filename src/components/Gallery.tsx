@@ -5,11 +5,11 @@ import { Camera, Lock, Smartphone, Shield, Sun, DoorOpen, Car, Zap, Users, Finge
 const galleryItems = [
   { category: "Surveillance", title: "4K IP Cameras", image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800", icon: Camera },
   { category: "Solar", title: "10KV Solar Plant", image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800", icon: Sun },
-  { category: "Biometrics", title: "Attendance Systems", image: "https://images.unsplash.com/photo-1551817958-c1993e11f8c9?auto=format&fit=crop&q=80&w=800", icon: Fingerprint },
+  { category: "Biometrics", title: "Attendance Systems", image: "https://images.pexels.com/photos/13657444/pexels-photo-13657444.jpeg", icon: Fingerprint },
   { category: "Automation", title: "Smart Home Hub", image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800", icon: Smartphone },
-  { category: "Access Control", title: "Boom Barriers", image: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=800", icon: Construction },
-  { category: "Automotive", title: "Car Dash Cams", image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800", icon: Car },
-  { category: "Security", title: "Smart Door Locks", image: "https://images.unsplash.com/photo-1521225091412-4030c67486a5?auto=format&fit=crop&q=80&w=800", icon: Lock },
+  { category: "Access Control", title: "Boom Barriers", image: "https://images.pexels.com/photos/8696219/pexels-photo-8696219.jpeg", icon: Construction },
+  { category: "Automotive", title: "Car Dash Cams", image: "https://images.pexels.com/photos/23319107/pexels-photo-23319107.jpeg", icon: Car },
+  { category: "Security", title: "Smart Door Locks", image: "https://images.pexels.com/photos/7522609/pexels-photo-7522609.jpeg", icon: Lock },
   { category: "Solar", title: "Solar Panels 5KV", image: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800", icon: Zap },
 ];
 
@@ -18,7 +18,7 @@ export const Gallery = () => {
     <section id="gallery" className="py-32 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">PROJECT <span className="text-gold">GALLERY</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-6">PROJECT <span className="text-gold">GALLERY</span></h2>
           <p className="text-white/50 max-w-2xl mx-auto text-lg">A showcase of our premium installations across Punjab and Chandigarh.</p>
         </div>
         
