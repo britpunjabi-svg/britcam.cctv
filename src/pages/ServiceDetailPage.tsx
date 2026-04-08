@@ -51,6 +51,17 @@ const serviceDetails: Record<string, any> = {
       'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1521225091412-4030c67486a5?auto=format&fit=crop&q=80&w=800'
     ]
+  },
+  'boom-barriers': {
+    title: 'Boom Barriers',
+    icon: Bell,
+    description: 'Automatic vehicle access control systems for residential and commercial complexes.',
+    features: ['High-Speed Operation', 'Remote & RFID Access', 'Loop Detector Integration', 'Weatherproof Design', 'Manual Override Support'],
+    images: [
+      'https://images.unsplash.com/photo-1506318137071-a8e063b4bcc0?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800'
+    ]
   }
 };
 

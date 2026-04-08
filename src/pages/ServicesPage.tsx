@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Camera, Fingerprint, Lock, Smartphone, Shield, Construction, Car, DoorOpen, Zap, Users, Bell, Video } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  Camera, Fingerprint, Lock, Smartphone, Shield, 
+  Construction, Car, DoorOpen, Zap, Users, 
+  Bell, Video, ChevronRight 
+} from 'lucide-react';
 
 const servicesList = [
   { 
@@ -126,7 +131,13 @@ export const ServicesPage = () => {
                 <div className="p-8">
                   <span className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3 block">{service.category}</span>
                   <h3 className="text-2xl font-display font-bold mb-4">{service.title}</h3>
-                  <p className="text-white/50 leading-relaxed text-sm">{service.desc}</p>
+                  <p className="text-white/50 leading-relaxed text-sm mb-6">{service.desc}</p>
+                  <Link 
+                    to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center gap-2 text-brand-gold font-bold uppercase tracking-widest text-xs hover:gap-3 transition-all"
+                  >
+                    Explore Details <ChevronRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </motion.div>
             ))}

@@ -36,7 +36,11 @@ export const AIChatBot = () => {
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+  const getAI = () => {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return null;
+    return new GoogleGenAI({ apiKey: key });
+  };
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -53,11 +57,15 @@ export const AIChatBot = () => {
     setLoading(true);
 
     try {
+      const ai = getAI();
+      if (!ai) {
+        throw new Error("API Key missing");
+      }
       const chatHistory = messages.map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.text}`).join('\n');
       const prompt = `${SYSTEM_PROMPT}\n\nChat History:\n${chatHistory}\nUser: ${userMsg}\nAssistant:`;
 
       const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
+        model: "gemini-1.5-flash",
         contents: prompt,
       });
 
@@ -88,9 +96,9 @@ export const AIChatBot = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center shadow-2xl shadow-brand-gold/40 cursor-pointer text-brand-dark"
+        className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center shadow-2xl shadow-brand-gold/40 cursor-pointer text-brand-dark"
       >
-        <MessageSquare className="w-8 h-8" />
+        <MessageSquare className="w-6 h-6" />
       </motion.button>
 
       <AnimatePresence>
